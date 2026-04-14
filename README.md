@@ -65,7 +65,7 @@ npm start
 Add your TMDB API key in `src/api/config.js` before running.
 
 ## Live Demo
-🌐 cineplusbook.netlify.app
+(https://cineplusbook.netlify.app/)
 
 ## Made By
 **Saurabh Patel**
