@@ -1,170 +1,62 @@
 # CineRead — Movie & Book Explorer
-### React + Tailwind CSS + TMDB API + Google Books API
 
----
+## About This Project
 
-## Project Overview
-CineRead ek full-featured web application hai jo movies aur books ke baare mein detailed information dikhata hai.
+I built CineRead as my 3rd year web development project. The idea was simple — I wanted to create one place where anyone can search for a movie or a book and get all the important details instantly, without visiting multiple websites.
 
-### Movie Features:
-- Title, Year, Genre, Runtime
-- Director & full Cast (with photos)
-- Budget & Box Office collection
-- Story / Overview
-- YouTube Trailer embed
-- Songs & Music videos
+## What It Does
+
+**For Movies**, you can search any movie and see:
+- Genre, release year and runtime
+- Director and full cast with photos
+- Budget and box office collection
+- Story overview
+- YouTube trailer
+- Songs and music videos
 - Similar movie recommendations
 
-### Book Features:
-- Title, Author(s), Publisher
-- Genre / Categories
-- Published year & page count
-- Full Summary
-- Star rating
-- "Who should read this" recommendation
-- Google Books preview link
+**For Books**, you can search any book and see:
+- Author and publisher
+- Genre and categories
+- Published year and page count
+- Full summary
+- Star ratings
+- Who should read this book
 
----
+## Technologies I Used
 
-## Tech Stack
-| Technology | Use |
-|---|---|
-| React 18 | Frontend framework |
-| Tailwind CSS | Styling |
-| TMDB API | Movie data (cast, genre, budget, trailer) |
-| Google Books API | Book data (summary, author, genre) |
-| Axios | HTTP requests |
+- **React 18** — I used React because it makes building interactive UIs much easier with components and state management
+- **Tailwind CSS** — for styling the app quickly without writing too much custom CSS
+- **TMDB API** — to fetch all movie related data like cast, budget, trailer and genres
+- **Google Books API** — to fetch book information like author, summary and categories
+- **Axios** — to make API calls cleanly
 
----
+## Challenges I Faced
 
-## Step 1 — API Keys Kaise Milein
+- Understanding how to call multiple APIs at the same time and combine their data
+- Parsing the API responses and displaying only the useful information
+- Making the UI look good on different screen sizes
+- Handling loading states and errors when API calls fail
 
-### TMDB API Key (FREE):
-1. https://www.themoviedb.org/signup par account banao
-2. Login karo → Settings → API → "Create" click karo
-3. App type: "Personal" select karo
-4. Form fill karo (simple details chahiye)
-5. API Key (v3 auth) copy karo
+## What I Learned
 
-### Google Books API Key (OPTIONAL - free tier mein bhi kaam karta hai):
-1. https://console.cloud.google.com par jao
-2. New project banao
-3. "Books API" enable karo
-4. Credentials → Create API Key
-5. Key copy karo
+- How to work with real world REST APIs
+- How React hooks like useState and useEffect work in practice
+- How to structure a React project with components, hooks and API files separately
+- How to deploy a web app live using Netlify
 
----
-
-## Step 2 — Project Setup
+## How to Run Locally
 
 ```bash
-# 1. Is folder mein terminal kholo
-cd movie-book-finder
-
-# 2. Dependencies install karo
 npm install
-
-# 3. Tailwind install karo
-npm install -D tailwindcss postcss autoprefixer
-
-# 4. Axios install karo
-npm install axios
-```
-
----
-
-## Step 3 — API Key Set Karo
-
-`src/api/config.js` file kholo aur apni keys daalo:
-
-```js
-export const CONFIG = {
-  TMDB_API_KEY: "apni_tmdb_key_yahan_daalo",
-  GOOGLE_BOOKS_API_KEY: "apni_google_key_yahan_daalo",  // optional
-  ...
-};
-```
-
----
-
-## Step 4 — Project Run Karo
-
-```bash
 npm start
 ```
 
-Browser mein `http://localhost:3000` khulega.
+Add your TMDB API key in `src/api/config.js` before running.
 
----
+## Live Demo
+🌐 cineplusbook.netlify.app
 
-## Step 5 — Project Build (Deployment ke liye)
-
-```bash
-npm run build
-```
-
-`build/` folder banegi jise Netlify/Vercel pe deploy kar sakte ho.
-
----
-
-## Project Structure
-
-```
-movie-book-finder/
-├── public/
-│   └── index.html
-├── src/
-│   ├── api/
-│   │   ├── config.js       ← API keys yahan
-│   │   ├── tmdb.js         ← TMDB API functions
-│   │   ├── books.js        ← Google Books API functions
-│   │   └── wikipedia.js    ← Wikipedia API functions
-│   ├── components/
-│   │   ├── SearchBar.jsx       ← Search input
-│   │   ├── ModeToggle.jsx      ← Movie/Book toggle
-│   │   ├── MovieResultsList.jsx ← Search results
-│   │   ├── MovieDetailCard.jsx  ← Full movie info
-│   │   ├── BookResultsList.jsx  ← Book search results
-│   │   ├── BookDetailCard.jsx   ← Full book info
-│   │   └── Skeleton.jsx         ← Loading placeholders
-│   ├── hooks/
-│   │   ├── useMovieSearch.js   ← Movie search logic
-│   │   └── useBookSearch.js    ← Book search logic
-│   ├── App.jsx             ← Main component
-│   ├── index.js            ← Entry point
-│   └── index.css           ← Global styles + Tailwind
-├── tailwind.config.js
-├── postcss.config.js
-└── package.json
-```
-
----
-
-## Possible Errors & Solutions
-
-| Error | Solution |
-|---|---|
-| "Invalid API Key" | TMDB key galat hai — check karo config.js |
-| "CORS Error" | Browser extension disable karo ya localhost use karo |
-| "Cannot read properties of undefined" | API response empty hai — query check karo |
-| Tailwind classes kaam nahi kar rahi | `tailwind.config.js` mein content path check karo |
-
----
-
-## Deployment (Free)
-
-### Netlify:
-1. https://netlify.com par account banao
-2. `npm run build` run karo
-3. `build/` folder drag & drop karo
-
-### Vercel:
-1. https://vercel.com par account banao
-2. GitHub se project import karo
-3. Auto deploy ho jaata hai
-
----
-
-## Made by
-**[Saurabh Patel]**
+## Made By
+**Saurabh Patel**
 3rd Year B.Tech — Web Development Project
