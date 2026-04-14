@@ -4,6 +4,16 @@
 
 I built CineRead as my 3rd year web development project. The idea was simple — I wanted to create one place where anyone can search for a movie or a book and get all the important details instantly, without visiting multiple websites.
 
+______________________________________________________________________________________________________________________________
+<img width="1457" height="825" alt="image" src="https://github.com/user-attachments/assets/1f564231-01a4-41dd-b087-2a08ebb7bdca" />
+<img width="1472" height="826" alt="image" src="https://github.com/user-attachments/assets/42e59c53-1935-4b8c-b47a-191092ef731b" />
+<img width="1293" height="826" alt="image" src="https://github.com/user-attachments/assets/61a446d1-22f3-4433-8865-ca745ae32cc6" />
+
+
+
+
+______________________________________________________________________________________________________________________________
+
 ## What It Does
 
 **For Movies**, you can search any movie and see:
